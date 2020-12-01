@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/henry/Google Drive/Fall 2020/CS492/Project/[C++] Regression/main.cpp
+iostream
+-
+vector
+-
+cmath
+-
+
