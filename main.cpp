@@ -40,42 +40,41 @@ int main() {
     cout << "By Henry Song" << endl;
     cout << endl;
 
-    int option, option2;
+    int data_option, method_option;
     cout << "Enter 1 to use hard-coded data for average annual temperatures from 2008 to 2018" << endl;
     cout << "Enter 2 to use user-input data" << endl;
     cout << "Select option: ";
-    cin >> option;
+    cin >> data_option;
     cout << endl;
 
     cout << "Enter 1 to calculate Linear Regression" << endl;
     cout << "Enter 2 to calculate Quadratic Regression" << endl;
     cout << "Select option: ";
-    cin >> option2;
+    cin >> method_option;
     cout << endl;
 
-    if(option == 1){
+    if(data_option == 1){
         int x[] = {1,2,3,4,5,6,7,8,9,10,11};
         vector<int> xData (x, x+sizeof(x)/sizeof(int));
         double y[] = {27.8,27.8,27.8,27.8,27.8,28.3,28.1,27.8,28.4,28.2,28.5};
         vector<double> yData (y, y+sizeof(y)/sizeof(double));
         size = xData.size();
         print(yData);
-        if(option2 == 1){
+        if(method_option == 1){
             findLinearRegression(xData, yData);
             printLinear();
-        }else if(option2 == 2){
+        }else if(method_option == 2){
             findQuadraticRegression(xData, yData);
             printQuadratic();
         }
-
-    }else if(option == 2) {
+    }else if(data_option == 2) {
         vector<double> yData = readData(); //y axis data
         vector<int> xData = findXData(yData.size()); //x axis data
         size = xData.size();
-        if(option2 == 1){
+        if(method_option == 1){
             findLinearRegression(xData, yData);
             printLinear();
-        }else if(option2 == 2){
+        }else if(method_option == 2){
             findQuadraticRegression(xData, yData);
             printQuadratic();
         }
